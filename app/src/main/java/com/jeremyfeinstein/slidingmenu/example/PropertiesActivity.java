@@ -1,6 +1,7 @@
 package com.jeremyfeinstein.slidingmenu.example;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
@@ -19,6 +20,11 @@ public class PropertiesActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		//https://blog.csdn.net/MarketAndTechnology/article/details/53667388
+
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
 		setSlidingActionBarEnabled(true);
 

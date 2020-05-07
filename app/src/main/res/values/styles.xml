@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ExampleTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="homeAsUpIndicator">@drawable/new_indicator</item>
-        <item name="android:homeAsUpIndicator">@drawable/new_indicator</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/holo_red_light</item>
+        &lt;!&ndash; Android 6.0以上 状态栏字色和图标为浅黑色&ndash;&gt;
+        <item name="android:windowLightStatusBar">true</item>
+    </style>-->
+
 
 </resources>
