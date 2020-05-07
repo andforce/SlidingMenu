@@ -1,16 +1,16 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
 
     defaultConfig {
+        applicationId "com.jeremyfeinstein.slidingmenu.example"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -24,12 +24,20 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
-// https://mvnrepository.com/artifact/com.android.support/support-fragment
-    implementation group: 'com.android.support', name: 'support-fragment', version: '28.0.0'
+    // https://mvnrepository.com/artifact/com.android.support/support-v4
+    //compile group: 'com.android.support', name: 'support-v4', version: '28.0.0'
+    // https://mvnrepository.com/artifact/com.android.support/viewpager
+    //noinspection GradleCompatible
+    implementation 'com.android.support:viewpager:28.0.0'
+
+
 
 //    implementation 'androidx.appcompat:appcompat:1.1.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 //    testImplementation 'junit:junit:4.12'
 //    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':library')
 }
